@@ -5,7 +5,6 @@
   </Configs>
   <NewExtensions>
     <extension index="0">extensions\Pause System Addon</extension>
-    <extension index="1">extensions\Space Creatures Generator</extension>
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\burp</sound>
@@ -39,7 +38,6 @@
     <sprite>sprites\sPalettes</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background0</background>
     <background>background\background</background>
   </backgrounds>
   <paths name="paths">
@@ -68,8 +66,6 @@
       <script>scripts\scr_ps_surface_create.gml</script>
     </scripts>
     <script>scripts\game_fix_resolution.gml</script>
-    <script>scripts\Creatures_GenerateSprite.gml</script>
-    <script>scripts\Creatures_GenerateNewPalette.gml</script>
   </scripts>
   <shaders name="shaders">
     <shader type="GLSLES">shaders\shader0.shader</shader>
@@ -88,18 +84,9 @@
     <objects name="Pause_system">
       <object>objects\parent_dont_pause</object>
     </objects>
-    <object>objects\obj_pause_example</object>
-    <objects name="Room1">
-      <object>objects\oHud</object>
-      <object>objects\oCreature</object>
-    </objects>
-    <objects name="Room2">
-      <object>objects\oSinusCreature</object>
-      <object>objects\oHolesCreature</object>
-      <object>objects\oSphereCreature</object>
-    </objects>
     <object>objects\chargebar</object>
     <object>objects\game_setup</object>
+    <object>objects\pausing</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>

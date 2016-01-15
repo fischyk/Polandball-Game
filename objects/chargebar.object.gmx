@@ -31,7 +31,7 @@
         </arguments>
       </action>
     </event>
-    <event eventtype="3" enumb="2">
+    <event eventtype="8" enumb="64">
       <action>
         <libid>1</libid>
         <id>500</id>
