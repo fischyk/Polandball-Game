@@ -34,6 +34,7 @@ movespeed = 4;
 jcharge = 1;
 chargetick = 0;
 
+
 </string>
           </argument>
         </arguments>
@@ -106,6 +107,7 @@ key_slide = keyboard_check(vk_shift);
 //Charge jumps
 if ((key_jcharge = 1) and (jcharge &lt; 4)) 
 {
+
 jcharge += 1
 }
 
@@ -171,6 +173,34 @@ y += vsp;
           </argument>
         </arguments>
       </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Draw jcharge
+sprite_charge = charge_0;
+if (jcharge = 0) sprite_charge = charge_0;
+if (jcharge = 1) sprite_charge = charge_1;
+if (jcharge = 2) sprite_charge = charge_2;
+if (jcharge = 3) sprite_charge = charge_3;
+if (jcharge = 4) sprite_charge = charge_4;
+sprite_assign(bar_charge,sprite_charge);
+</string>
+          </argument>
+        </arguments>
+      </action>
     </event>
     <event eventtype="5" enumb="83">
       <action>
@@ -191,6 +221,34 @@ y += vsp;
             <kind>1</kind>
             <string>jcharge = 0
 </string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>541</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_sprite_set</functionname>
+        <codestring></codestring>
+        <whoName>bar_charge</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>5</kind>
+            <sprite>charge_0</sprite>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>0</string>
+          </argument>
+          <argument>
+            <kind>0</kind>
+            <string>1</string>
           </argument>
         </arguments>
       </action>
@@ -298,46 +356,6 @@ y += vsp;
       </action>
       <action>
         <libid>1</libid>
-        <id>532</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_effect</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>4</kind>
-            <string>3</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>1</string>
-          </argument>
-          <argument>
-            <kind>13</kind>
-            <string>16777215</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
         <id>603</id>
         <kind>7</kind>
         <userelative>0</userelative>
@@ -358,15 +376,6 @@ if ((room = room0) and (lives = 0))
     object_set_sprite(obj_target,france);
 }
 
-if ((room = room1) and (lives = 0))
-{
-    object_set_sprite(obj_target,uganda);
-}
-
-if ((room = room2) and (lives = 0))
-{
-    object_set_sprite(obj_target,za);
-}
 if ((room = room3) and (lives = 0))
 {
     object_set_sprite(obj_target,peru);
@@ -448,36 +457,6 @@ if ((room = room4) and (lives = 0))
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="8" enumb="64">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>///Draw jcharge
-sprite_charge = charge_0
-if (jcharge = 0) sprite_charge = charge_0;
-if (jcharge = 1) sprite_charge = charge_1;
-if (jcharge = 2) sprite_charge = charge_2;
-if (jcharge = 3) sprite_charge = charge_3;
-if (jcharge = 4) sprite_charge = charge_4;
-draw_sprite(sprite_charge,0,16,16);
-</string>
-          </argument>
-        </arguments>
       </action>
     </event>
     <event eventtype="9" enumb="82">
