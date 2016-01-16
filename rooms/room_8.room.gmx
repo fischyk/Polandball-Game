@@ -237,6 +237,7 @@
     <instance objName="obj_3ball" x="832" y="416" name="inst_C6BD77B9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_3ball" x="320" y="608" name="inst_5F81D4F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_target" x="480" y="352" name="inst_3F6A26AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="game_setup" x="672" y="0" name="inst_2CF8C393" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

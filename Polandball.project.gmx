@@ -36,9 +36,22 @@
     <sprite>sprites\door</sprite>
     <sprite>sprites\spr_pause</sprite>
     <sprite>sprites\sPalettes</sprite>
+    <sprite>sprites\sprite20</sprite>
+    <sprite>sprites\sprite21</sprite>
+    <sprite>sprites\sprite22</sprite>
+    <sprite>sprites\sprite23</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background</background>
+    <backgrounds name="qui">
+      <background>background\background</background>
+      <background>background\background6</background>
+    </backgrounds>
+    <backgrounds name="levels">
+      <background>background\background2</background>
+      <background>background\background3</background>
+      <background>background\background4</background>
+      <background>background\background5</background>
+    </backgrounds>
   </backgrounds>
   <paths name="paths">
     <path>paths\path0</path>
@@ -87,20 +100,24 @@
     <object>objects\chargebar</object>
     <object>objects\game_setup</object>
     <object>objects\pausing</object>
+    <object>objects\controls_button</object>
+    <object>objects\menu_button</object>
+    <object>objects\mouse</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
   </timelines>
   <rooms name="rooms">
+    <rooms name="gui">
+      <room>rooms\main_menu</room>
+      <room>rooms\controls_menu</room>
+    </rooms>
     <rooms name="levels">
       <room>rooms\room0</room>
       <room>rooms\room3</room>
       <room>rooms\room4</room>
       <room>rooms\room5</room>
       <room>rooms\room_8</room>
-    </rooms>
-    <rooms name="gui">
-      <room>rooms\gui_room</room>
     </rooms>
   </rooms>
   <help>
