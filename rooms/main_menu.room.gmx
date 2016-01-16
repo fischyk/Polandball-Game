@@ -78,6 +78,7 @@
     <instance objName="obj_3ball" x="160" y="608" name="inst_59AED5D2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="controls_button" x="768" y="512" name="inst_D6D8C8ED" locked="0" code="" scaleX="0.660000026226044" scaleY="0.819999992847443" colour="4294967295" rotation="0"/>
     <instance objName="mouse" x="416" y="320" name="inst_FDE8D588" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="high_score" x="928" y="0" name="inst_08D151D9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>

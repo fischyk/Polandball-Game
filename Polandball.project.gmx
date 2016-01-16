@@ -103,6 +103,7 @@
     <object>objects\controls_button</object>
     <object>objects\menu_button</object>
     <object>objects\mouse</object>
+    <object>objects\high_score</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
