@@ -182,7 +182,7 @@ while (!place_meeting(x,y+sign(vsp),obj_wall))
 y += vsp;
 if (place_meeting(x,y,obj_wall)) vsp -= 1;
 //Horizontal Death
-if (place_meeting(x+hsp,y,obj_obst))
+if (place_meeting(x+hsp+17,y,obj_obst))
 {
     while(!place_meeting(x+sign(hsp),y,obj_obst))
     {

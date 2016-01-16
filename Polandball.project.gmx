@@ -8,6 +8,7 @@
   </NewExtensions>
   <sounds name="sound">
     <sound>sound\burp</sound>
+    <sound>sound\mamba</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sprite0</sprite>
@@ -40,11 +41,13 @@
     <sprite>sprites\sprite21</sprite>
     <sprite>sprites\sprite22</sprite>
     <sprite>sprites\sprite23</sprite>
+    <sprite>sprites\sprite_button_objectives</sprite>
   </sprites>
   <backgrounds name="background">
-    <backgrounds name="qui">
+    <backgrounds name="gui">
       <background>background\background</background>
       <background>background\background6</background>
+      <background>background\background7</background>
     </backgrounds>
     <backgrounds name="levels">
       <background>background\background2</background>
@@ -104,6 +107,7 @@
     <object>objects\menu_button</object>
     <object>objects\mouse</object>
     <object>objects\high_score</object>
+    <object>objects\objective_button</object>
   </objects>
   <timelines name="timelines">
     <timeline>timelines\timeline0</timeline>
@@ -112,6 +116,7 @@
     <rooms name="gui">
       <room>rooms\main_menu</room>
       <room>rooms\controls_menu</room>
+      <room>rooms\objective_menu</room>
     </rooms>
     <rooms name="levels">
       <room>rooms\room0</room>
