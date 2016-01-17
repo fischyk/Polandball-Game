@@ -26,14 +26,14 @@
           <argument>
             <kind>1</kind>
             <string>///Initial
-
+jump_timer = 2
 dir = -1;
 movespad = 2;
-gravi = 0.2;
+gravi = 0.5;
 hsp = 0;
 vsp = 0;
 jumpspeed = 8;
-tick = 0
+tick = 20
 </string>
           </argument>
         </arguments>
@@ -57,23 +57,22 @@ tick = 0
           <argument>
             <kind>1</kind>
             <string>///Stuff
+if jump_timer &gt; 0 {
 hsp = dir * movespad;
 
-if (place_meeting(x,y+1, obj_wall))
+}
+jump_timer -= 1;
+if (jump_timer = 0)
 {
+    if place_meeting(x,y+16, obj_wall) {
     vsp = -jumpspeed;
-    
+    }
+    hsp = 0 ;
+    vsp += gravi;
+    jump_timer = 20;
 }
+
 vsp += gravi;
-//Prevent falling
-if (!place_meeting(x-16,y+1, obj_wall)) 
-{
-    dir = 1
-}
-if (!place_meeting(x+16,y+1, obj_wall)) 
-{
-    dir = -1
-}
 //Horizontal Collision
 if (place_meeting(x+hsp,y, obj_wall))
 {
@@ -83,8 +82,9 @@ if (place_meeting(x+hsp,y, obj_wall))
     }
     hsp = 0;
     
-    dir *= -1
+    dir *= -1;
 }
+
 x += hsp;
 //Vertical Collision
 if (place_meeting(x,y+vsp, obj_wall))
@@ -96,16 +96,7 @@ while (!place_meeting(x,y+sign(vsp),obj_wall))
     vsp = 0;
 }
 y += vsp;
-//Moving away from dead end
-//if ((place_meeting(x+vsp,y,obj_wall)) and (!place_meeting(x,y+1, obj_wall))) 
-//{ 
-//tick += 1
-//if tick = 5 {
- //   dir *= -1 
-//    tick = 0
-//    }
-//
-//}
+
 //Enemy collision
 if (place_meeting(x,y,obj_player))
 {
@@ -125,138 +116,7 @@ if (place_meeting(x,y,obj_player))
     }
 
 }
-
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="87">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if place_meeting(x+17,y,obj_wall)
-{
-    dir *= -1;
-}
-if place_meeting(x-17,y,obj_wall)
-{
-    dir *= -1;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="83">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if place_meeting(x+vsp,y,obj_wall)
-{
-    dir *= -1;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="68">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if place_meeting(x+vsp,y,obj_wall)
-{
-    dir *= -1;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="65">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if place_meeting(x+vsp,y,obj_wall)
-{
-    dir *= -1;
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="9" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>if place_meeting(x+vsp,y,obj_wall)
+if place_meeting(x+vsp,y,obj_wall)
 {
     dir *= -1;
 }

@@ -30,6 +30,10 @@ if room = main_menu {
        saying = 'Press ENTER to Start!' ;
 
 }
+globalvar tx_a ;
+tx_a = x ;
+globalvar ty_a ;
+ty_a = y ;
 </string>
           </argument>
         </arguments>

@@ -101,8 +101,8 @@
       <object>objects\parent_dont_pause</object>
     </objects>
     <object>objects\chargebar</object>
-    <object>objects\game_setup</object>
     <object>objects\pausing</object>
+    <object>objects\game_setup</object>
     <object>objects\controls_button</object>
     <object>objects\menu_button</object>
     <object>objects\mouse</object>
